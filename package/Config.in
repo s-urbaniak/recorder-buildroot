@@ -1,0 +1,5 @@
+menu "Hardware handling"
+menu "Firmware"
+	source "$BR2_EXTERNAL_RECORDER_PATH/package/rpi-wifi-firmware/Config.in"
+endmenu
+endmenu

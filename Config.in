@@ -1,1 +1,1 @@
-# empty
+source "$BR2_EXTERNAL_RECORDER_PATH/package/Config.in"
