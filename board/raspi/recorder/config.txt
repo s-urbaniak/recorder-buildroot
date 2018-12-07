@@ -1,0 +1,5 @@
+kernel=zImage
+
+gpu_mem=64
+
+dtoverlay=dwc2
