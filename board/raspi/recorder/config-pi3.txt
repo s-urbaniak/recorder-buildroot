@@ -1,0 +1,3 @@
+kernel=zImage
+gpu_mem=128
+dtoverlay=dwc2

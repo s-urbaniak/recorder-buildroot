@@ -4,10 +4,11 @@ set -u
 set -e
 set -x
 
-BOARD="/board/raspi/recorder"
+BOARD_DIR="$(dirname $0)"
+BOARD_NAME="$(basename ${BOARD_DIR})"
 
-for file in "config.txt" "cmdline.txt"; do
+for file in "config" "cmdline"; do
     install -D -m 0644 \
-            "${BR2_EXTERNAL_RECORDER_PATH}${BOARD}/${file}" \
-            "${BINARIES_DIR}/rpi-firmware/${file}"
+            "${BOARD_DIR}/${file}-${BOARD_NAME}.txt" \
+            "${BINARIES_DIR}/rpi-firmware/${file}.txt"
 done
