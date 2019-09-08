@@ -1,0 +1,5 @@
+[Service]
+ExecStart=/usr/sbin/telnetd -F
+
+[Install]
+WantedBy=network.target
