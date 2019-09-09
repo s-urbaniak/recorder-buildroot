@@ -12,3 +12,8 @@ for file in "config" "cmdline"; do
             "${BOARD_DIR}/${file}-${BOARD_NAME}.txt" \
             "${BINARIES_DIR}/rpi-firmware/${file}.txt"
 done
+
+cat \
+    ${BOARD_DIR}/rootfs-overlay/etc/wpa_supplicant/wpa_supplicant-nl80211-wlan0.conf \
+    ${BOARD_DIR}/networks.conf \
+    >${TARGET_DIR}/etc/wpa_supplicant/wpa_supplicant-nl80211-wlan0.conf
