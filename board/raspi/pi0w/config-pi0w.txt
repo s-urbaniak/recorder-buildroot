@@ -1,6 +1,13 @@
 kernel=zImage
 gpu_mem=64
 dtoverlay=dwc2
+
+# enable miniuart
 dtoverlay=pi3-miniuart-bt
 enable_uart=1
 force_turbo=1
+
+# enable bcm2835 audio
+dtparam=audio=on
+# Use pins 13 and 18 for the left and right channels.
+dtoverlay=pwm-2chan,pin=18,func=2,pin2=13,func2=4
