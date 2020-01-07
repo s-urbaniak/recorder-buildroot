@@ -1,3 +1,7 @@
 kernel=zImage
 gpu_mem=64
 dtoverlay=dwc2
+
+# enable i2s sound
+dtoverlay=hifiberry-dac
+dtoverlay=i2s-mmap

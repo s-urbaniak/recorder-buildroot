@@ -1,0 +1,9 @@
+[Unit]
+Description=Attach /dev/ttyS0 to BlueZ stack using BCM protocol
+Wants=bluetooth.service
+Before=bluetooth.service
+After=dev-ttyS0.device
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/btattach -B /dev/ttyS0 -P bcm
